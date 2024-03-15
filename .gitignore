@@ -68,7 +68,7 @@ htmlcov/
 
 # PyCharm files
 .idea/*
-pyproject_starter/.idea/*
+ai_tutorial/.idea/*
 
 # pytest files
 .cache/*

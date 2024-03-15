@@ -6,7 +6,7 @@
 import re
 import urllib.request
 
-from pyproject_starter.pkg_globals import PACKAGE_ROOT
+from ai_tutorial.pkg_globals import PACKAGE_ROOT
 
 DOCKER_DIR = PACKAGE_ROOT / 'docker'
 NVIDIA_NGC_URL = 'https://catalog.ngc.nvidia.com/orgs/nvidia/containers/'

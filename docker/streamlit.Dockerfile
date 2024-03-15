@@ -1,6 +1,6 @@
 FROM python:3.11
 
-WORKDIR /usr/src/pyproject_starter/applications/streamlit
+WORKDIR /usr/src/ai_tutorial/applications/streamlit
 
 COPY ../applications/streamlit .
 
@@ -11,8 +11,12 @@ RUN pip install --upgrade pip \
 	# && apt -y upgrade \
 	&& apt install -y\
 		fonts-humor-sans \
-        vim
+        vim \
+	&& rm -rf /tmp/* \
+	&& rm -rf /var/lib/desktop-containerd/daemon/tmpmounts/* \
+	&& rm -rf /var/lib/apt/lists/* \
+	&& apt clean -y
 
-ENV PYTHONPATH=/usr/src/pyproject_starter
+ENV PYTHONPATH=/usr/src/ai_tutorial
 
 CMD ["streamlit", "run", "app.py"]

@@ -13,10 +13,10 @@ from . import utils
 __version__ = '0.1.0'
 
 try:
-    _dist = get_distribution('pyproject_starter')
+    _dist = get_distribution('ai_tutorial')
     dist_loc = path.normcase(_dist.location)
     here = path.normcase(__file__)
-    if not here.startswith(path.join(dist_loc, 'pyproject_starter')):
+    if not here.startswith(path.join(dist_loc, 'ai_tutorial')):
         raise DistributionNotFound
 except DistributionNotFound:
     __version__ = 'Please install this project with setup.py'

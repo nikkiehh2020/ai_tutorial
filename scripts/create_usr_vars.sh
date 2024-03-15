@@ -22,10 +22,10 @@ done
 INITIAL_PORT=$(( (UID - 500) * 50 + 10000 ))
 printf "%s\n" \
     "USER_NAME=${USER}" \
-    "PROJECT_NAME=pyproject_starter" \
+    "PROJECT_NAME=ai_tutorial" \
     "" \
     "# Data Directory" \
-    "DATA_DIR=/mnt/data" \
+    "DATA_DIR=/Users/nicolehung/projects/data" \
     "" \
     "# Ports" \
     "PORT_DASH=$INITIAL_PORT" \

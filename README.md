@@ -20,18 +20,18 @@ repetitive commands.
   - `docker-compose.yaml`: Yaml file used by Docker Compose to define the services, 
   networks, and volumes for a multi-container application
 - `docs`: Folder used by sphinx for auto-documentation
-- `pyproject_starter`: Project main script directory - additional apps are added here
+- `ai_tutorial`: Project main script directory - additional apps are added here
   - `configs`: Project configuration files
   - `test`: Project unit tests
 - `scripts`: Folder with setup related scripts
 
 ### Docker Naming Convention
 Service: <project_name>_<service>
-    - `pyproject_starter_python`
+    - `ai_tutorial_python`
 Container: <user_name>_<project_name>_<service>
-    - `mthnguyener_pyproject_starter_python`
+    - `mthnguyener_ai_tutorial_python`
 Image: <project_name>_<service>
-    - `pyproject_starter_python`
+    - `ai_tutorial_python`
 
 ### Makefile Code Completion
 It's handy to have code completion when calling targets from the Makefile.
@@ -49,8 +49,8 @@ repository.
 ```bash
 git clone <enter_path_to_repo>.git
 ```
-A directory called `pyproject_starter` will be created where the 
-command was executed. This `pyproject_starter` directory will be 
+A directory called `ai_tutorial` will be created where the 
+command was executed. This `ai_tutorial` directory will be 
 referred to as the "package root directory" throughout the project.
 
 ### Setting Up New Project
@@ -60,7 +60,7 @@ referred to as the "package root directory" throughout the project.
 2. Current project directories and files are created in the new project directory
     - `new_project/`
 3. The new project is created 1-level up from the current project root directory
-    - if current project directory is `projects/pyproject_starter` 
+    - if current project directory is `projects/ai_tutorial` 
       then the new project is created at `projects/new_project`
 4. To add to git:
    - `git init`
@@ -81,7 +81,7 @@ make getting-started
 ### Jupyter Notebooks
 While Jupyter notebooks are not ideal for source code, they can be powerful
 when applied to path finding and creating training material.
-The pyproject_starter project is capable of creating a Jupyter 
+The ai_tutorial project is capable of creating a Jupyter 
 server in the Python container. Since the package root directory is mounted to 
 the Docker container any changes made on the client will persist on the host and
 vice versa. For consistency when creating notebooks please store them in the 
@@ -124,7 +124,7 @@ make format-style
 ```
 
 ## Dependencies
-Since the pyproject_starter utilizes NVIDIA optimized Docker 
+Since the ai_tutorial utilizes NVIDIA optimized Docker 
 images most of the Python dependencies could be installed using PIP or Conda.
 The `requirements.txt` file contains a reference to the specific
 base image used during development and a list of dependencies.
@@ -153,7 +153,7 @@ make docs-view
 ## Profilers
 Before refactoring it's usually a ***great*** idea to profile the code.
 The following methods describe the profilers that are available in the 
-pyproject_starter environment, and how to use them.
+ai_tutorial environment, and how to use them.
 
 
 ### SNAKEVIZ Execution

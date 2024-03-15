@@ -32,13 +32,13 @@ dependencies = {
         'snakeviz',
     },
     'postgres': {
-        'psycopg2-binary',
-        'sqlalchemy',
+        # 'psycopg2-binary',
+        # 'sqlalchemy',
     },
     'ray': {
-        'gpustat==1.0.0',
-        'optuna',
-        'ray[default,air,serve,tune]',
+        # 'gpustat==1.0.0',
+        # 'optuna',
+        # 'ray[default,air,serve,tune]',
     },
     'test': {
         'Faker',
@@ -65,7 +65,7 @@ def combine_dependencies(extras: Union[str, Iterable[str]]) -> List[str]:
     return list(deps)
 
 
-with open('pyproject_starter/__init__.py', 'r') as fd:
+with open('ai_tutorial/__init__.py', 'r') as fd:
     version = re.search(r'^__version__\s*=\s*[\'"]([^\'"]*)[\'"]', fd.read(),
                         re.MULTILINE).group(1)
 
@@ -74,7 +74,7 @@ with open(here / 'README.md', encoding='utf-8') as f:
     long_description = f.read()
 
 setup(
-    name='pyproject_starter',
+    name='ai_tutorial',
     version=version,
     description='Modules related to EnterDescriptionHere',
     author='Minh Nguyen',
@@ -102,19 +102,19 @@ setup(
         '*tests',
     ]),
     install_requires=[
-        'captum',
-        'click',
-        'dash',
+        # 'captum',
+        # 'click',
+        # 'dash',
         # 'dask',
-        'lovely-tensors',
+        # 'lovely-tensors',
         # 'matplotlib',
-        'mlflow',
-        # 'pandas',
+        # 'mlflow',
+        'pandas',
         'plotly',
         'pyyaml',
         # 'torch',
         # 'torchdata',
-        'torchmetrics',
+        # 'torchmetrics',
         # 'torchvision',
         'ujson',
         'yapf',
@@ -139,10 +139,10 @@ setup(
         'test':
         combine_dependencies('test'),
     },
-    package_dir={'pyproject_starter': 'pyproject_starter'},
+    package_dir={'ai_tutorial': 'ai_tutorial'},
     include_package_data=True,
     entry_points={'console_scripts': [
-        'count=pyproject_starter.cli:count',
+        'count=ai_tutorial.cli:count',
     ]})
 
 if __name__ == '__main__':

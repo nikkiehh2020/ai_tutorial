@@ -7,9 +7,9 @@ import pytest
 
 from .. import db
 
-# DATABASE = 'pyproject_starter'
-# HOST = 'pyproject_starter_postgres'
-# TABLE_NAME = '<enter_table_name_in_pyproject_starter_db>'
+# DATABASE = 'ai_tutorial'
+# HOST = 'ai_tutorial_postgres'
+# TABLE_NAME = '<enter_table_name_in_ai_tutorial_db>'
 
 # Test Connect.__repr__()
 # def test_connect_repr():

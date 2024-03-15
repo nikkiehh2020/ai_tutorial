@@ -1,6 +1,6 @@
 FROM python:latest
 
-WORKDIR /usr/src/pyproject_starter
+WORKDIR /usr/src/ai_tutorial
 
 COPY . .
 

@@ -19,7 +19,7 @@ LOGGER = logging.getLogger(__name__)
 
 # Test docker_secret()
 docker_secret = {
-    'package': ('package', 'pyproject_starter'),
+    'package': ('package', 'ai_tutorial'),
 }
 
 

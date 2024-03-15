@@ -21,7 +21,7 @@ try {
         [
           {role: "readWrite", db: "admin" },
           {role: "readWrite", db: db_name },
-          {role: "dbOwner", db: "test_pyproject_starter"},
+          {role: "dbOwner", db: "test_ai_tutorial"},
         ]
     }
   )

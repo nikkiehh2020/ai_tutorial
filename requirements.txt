@@ -1,0 +1,4 @@
+jupyter
+jupyterlab>=3
+kaleido
+protobuf<4

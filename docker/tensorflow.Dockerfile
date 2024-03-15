@@ -1,6 +1,6 @@
 FROM nvcr.io/nvidia/tensorflow:
 
-WORKDIR /usr/src/pyproject_starter
+WORKDIR /usr/src/ai_tutorial
 
 COPY . .
 
@@ -10,7 +10,7 @@ RUN cd /opt \
 	&& apt install -y \
 		apt-utils \
 		fonts-humor-sans \
-	&& cd /usr/src/pyproject_starter \
+	&& cd /usr/src/ai_tutorial \
 	&& pip install --upgrade pip \
 	&& pip install -e .[all] \
 	&& rm -rf /tmp/* \

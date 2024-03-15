@@ -1,4 +1,4 @@
-PROJECT=pyproject_starter
+PROJECT=ai_tutorial
 
 $(shell scripts/create_usr_vars.sh)
 ifeq (, $(wildcard docker/.env))
@@ -99,8 +99,8 @@ else
 			 && sed -i \"/# sys.path.insert(0, os.path.abspath('.'))/d\" \
 				conf.py \
 			 && sed -i -e \"/import sys/a \
-				from pyproject_starter import __version__ \
-				\n\nsys.path.insert(0, os.path.abspath('../pyproject_starter'))\" \
+				from ai_tutorial import __version__ \
+				\n\nsys.path.insert(0, os.path.abspath('../ai_tutorial'))\" \
 				conf.py \
 			 && sed -i -e \"s/version = '0.1.0'/version = __version__/g\" \
 				conf.py \

@@ -18,8 +18,8 @@ import numpy as np
 import ray
 from ray._private.worker import BaseContext
 
-from pyproject_starter.exceptions import InputError
-from pyproject_starter.pkg_globals import FONT_SIZE, TIME_FORMAT
+from ai_tutorial.exceptions import InputError
+from ai_tutorial.pkg_globals import FONT_SIZE, TIME_FORMAT
 
 
 def docker_secret(secret_name: str) -> Optional[str]:

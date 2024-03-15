@@ -1,17 +1,20 @@
-FROM nvcr.io/nvidia/pytorch:23.11-py3
+# FROM nvcr.io/nvidia/pytorch:23.11-py3
+FROM rocm/dev-ubuntu-20.04:latest
 
-ENV TORCH_HOME=/usr/src/pyproject_starter/cache
+ENV TORCH_HOME=/usr/src/ai_practice/cache
 
-WORKDIR /usr/src/pyproject_starter
+WORKDIR /usr/src/ai_practice
 
 COPY . .
 
 RUN pip install --upgrade pip \
-	&& pip install -e .[all] \
 	&& apt update -y \
 	# && apt -y upgrade \
 	&& apt install -y\
 		fonts-humor-sans \
+        libjpeg-dev \
+        python3-dev \
+    && pip install -e .[all] \
     && pip install -r \
         requirements.txt \
 	# && conda update -y conda \
