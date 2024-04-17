@@ -1,9 +1,11 @@
 # FROM nvcr.io/nvidia/pytorch:23.11-py3
-FROM rocm/dev-ubuntu-20.04:latest
+# FROM rocm/dev-ubuntu-20.04:latest
+# FROM pytorch/pytorch:latest
+FROM jupyter/minimal-notebook:latest
 
-ENV TORCH_HOME=/usr/src/ai_practice/cache
+# ENV TORCH_HOME=/usr/src/ai_tutorial/cache
 
-WORKDIR /usr/src/ai_practice
+WORKDIR /usr/src/ai_tutorial
 
 COPY . .
 
@@ -24,5 +26,8 @@ RUN pip install --upgrade pip \
 	&& rm -rf /var/lib/apt/lists/* \
 	&& apt clean -y
 
+EXPOSE 8888
+
 CMD [ "/bin/bash" ]
+
 
